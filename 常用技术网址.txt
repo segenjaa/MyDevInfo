@@ -1,3 +1,6 @@
 Web开发
 极客标签：http://www.gbtags.com/gb/explore.htm
 红黑联盟：http://www.2cto.com/ym/php/
+
+编程工具
+nodepad++：http://notepad-plus-plus.org/download/v6.5.1.html
