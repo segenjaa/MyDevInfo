@@ -4,3 +4,5 @@ Web开发
 
 编程工具
 nodepad++：http://notepad-plus-plus.org/download/v6.5.1.html
+
+akaros操作系统：http://akaros.cs.berkeley.edu/akaros-web/overview.php
