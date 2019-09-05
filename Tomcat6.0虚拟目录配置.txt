@@ -1,17 +1,18 @@
-Tomcat6.0����Ŀ¼����
+﻿Tomcat6.0虚拟目录配置
 
-������Ŀ¼ "site"��ͨ�� http://localhost:8080/site ��������·�� D:"site �ļ�����������ݡ����ù������£� 
-1.���� Tomcat6.0"webapps"ROOT Ŀ¼�µ� WEB-INF �ļ��е� D:"site Ŀ¼�¡� 
-2.�� D:"site"WEB-INF Ŀ¼�µ� web.xml �ļ�,�� </description> ֮����룺 
+设虚拟目录 "site"，通过 http://localhost:8080/site 访问物理路径 D:"site 文件夹里面的内容。设置过程如下： 
+1.复制 Tomcat6.0"webapps"ROOT 目录下的 WEB-INF 文件夹到 D:"site 目录下。 
+2.打开 D:"site"WEB-INF 目录下的 web.xml 文件,在 </description> 之后加入： 
 <!--JSPC servlet mappings start --> 
 <!--JSPC servlet mappings end --> 
-3.�� Tomcat6.0"conf"server.xml �ļ����� <Host> �� </Host> ֮����룺 
+3.打开 Tomcat6.0"conf"server.xml 文件，在 <Host> 和 </Host> 之间加入： 
 <Context path="/site" docBase="d:"site"></Context> 
-path="/site" ��������Ŀ¼������ 
-docBase="d:"site"> Ϊ����·�� 
-4.�� Tomcat6.0"conf"web.xml �ļ����ҵ�: 
+path="/site" 就是虚拟目录的名称 
+docBase="d:"site"> 为物理路径 
+4.打开 Tomcat6.0"conf"web.xml 文件，找到: 
 <init-param> 
 <param-name>listings</param-name> 
 <param-value>false</param-value> 
 </init-param> 
-��false���true���棬����Tomcat�����ھͿ���Ӧ�� http://localhost:8080/site ����Ŀ¼�ˡ�
+把false设成true保存，重启Tomcat，现在就可以应用 http://localhost:8080/site 虚拟目录了。
+效果测试看一下
